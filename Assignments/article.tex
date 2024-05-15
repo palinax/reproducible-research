@@ -8,7 +8,7 @@
 \bibliographystyle{abbrvnat}
 
 \title{RR project}
-\author{Jakub Michańków}
+\author{Palina Tkachova}
 \date{May 2024}
 
 \begin{document}
@@ -23,48 +23,43 @@ This is the introduction section.
 
 This is a subsection within the introduction.
 
-\subsection{Math equations}
+\subsection{Mathematical Representations}
 
-When working with more advanced equations in LaTeX, you can use various environments depending on the structure and formatting you require. The equation environment is commonly used for single, numbered equations. However, for more complex structures like multiline equations or aligned equations, you can use other environments like align, gather, split, etc.
+When exploring complex mathematical concepts, LaTeX provides versatile environments for displaying equations. You can use environments like array for matrices, cases for piecewise functions, and custom commands for recurring structures.
+
+Matrix Representation using array Environment
 
 \[
-E = mc^2
+\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{array}
 \]
 
-\[ % Another way to write equations
-\int_{a}^{b} x^2 \, dx
+Piecewise Function using cases Environment
+
+\[
+f(x) = 
+\begin{cases} 
+x^2 & \text{if } x \geq 0 \\
+-x & \text{if } x < 0 
+\end{cases}
 \]
 
-Single Equations with equation Environment
+Custom Command for Recurring Structures
 
-\begin{equation}
-    f(x) = ax^2 + bx + c
-\end{equation}
+\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+\[
+\diff{y}{x} = 3x^2
+\]
 
-\vspace{20pt}
-
-Multiple Aligned Equations with align Environment
+Exponential and Logarithmic Functions with align Environment
 
 \begin{align}
-    f(x) &= ax^2 + bx + c \\
-    g(x) &= dx^3 + ex^2 + fx + g
+    e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
+    \log(1+x) &= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots
 \end{align}
-
-Multiline Equations with gather Environment
-
-\begin{gather}
-    f(x) = ax^2 + bx + c \\
-    g(x) = dx^3 + ex^2 + fx + g
-\end{gather}
-
-Splitting Equations with split Environment
-
-\begin{equation}
-    \begin{split}
-        f(x) &= ax^2 + bx + c \\
-        g(x) &= dx^3 + ex^2 + fx + g
-    \end{split}
-\end{equation}
 
 \subsection{Lists}
 
@@ -105,9 +100,6 @@ Splitting Equations with split Environment
 
 And now an example of a citation \cite{goossens1994latex} in text.
 
-
-
-%% Doesnt need section
 \bibliography{references.bib}
 
 \end{document}
